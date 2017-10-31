@@ -1,0 +1,25 @@
+body {
+    background: #ffffff;
+}
+
+svg {
+    width: 150px;
+    height: 300px;
+    border: 1px solid black;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+#grafi_cuadra {
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+}
+
+#grafi_triangulo {
+    fill: lime;
+    stroke: purple;
+    stroke-width: 1;
+}
