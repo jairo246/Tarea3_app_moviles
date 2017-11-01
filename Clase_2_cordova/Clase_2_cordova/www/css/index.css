@@ -3,23 +3,36 @@ body {
 }
 
 svg {
-    width: 150px;
-    height: 300px;
+    width: 300;
+    height: 300;
     border: 1px solid black;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
 }
 
-#grafi_cuadra {
+#cuadra {
     fill: none;
-    stroke: black;
-    stroke-width: 3;
+    stroke: green;
+    stroke-width: 3px;
 }
 
-#grafi_triangulo {
+#gra_tri {
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+
+#triang {
     fill: lime;
-    stroke: purple;
-    stroke-width: 1;
+}
+
+#cate_a {
+    fill: red;
+}
+
+#cate_b {
+    fill: yellow;
 }

@@ -5,56 +5,58 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Tarea Cordova</title>
     </head>
-    <body>
-        <form>
-            <label name="const_a">Contante A</label>
-            <input type="number" name="const_a" id="const_a"><br>
-
-            <label name="const_b">Contante B</label>
-            <input type="number" name="const_b" id="const_b"><br>
-
-            <label name="const_c">Contante C</label>
-            <input type="number" name="const_c" id="const_c"><br>
-
-            <input type="button" onclick="Ecuacion(),Resolver(),grafico_ecuacion()" value="Cacular">
-
-        </form>
-
-        <p id="demo">a*x**2 + b*x +c</p>
-        <p id="resul"></p>
-        <p id="valores"></p>
-
-        <svg height="210" width="500">
-            <line x1="0" y1="0" x2="0" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
-            <line x1="0" y1="200" x2="600" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+<body>
+    <p> Ecuacion Cuadratica</p>
 
 
-            <polyline id="grafi_cuadra" " />
+    <form>
+        <label name="const_a">Contante A</label>
+        <input type="number" name="const_a" id="const_a"><br>
 
-        </svg>
+        <label name="const_b">Contante B</label>
+        <input type="number" name="const_b" id="const_b"><br>
 
-        <p>Triangulo (se recominda numero entre 30 - 50 para que grafico se distinga)</p>
+        <label name="const_c">Contante C</label>
+        <input type="number" name="const_c" id="const_c"><br>
 
-        <form>
-            <label name="const_a">Cateto A</label>
-            <input type="number" name="angu_a" id="angu_a"><br>
+        <input type="button" onclick="Ecuacion(),Resolver(),grafico_ecuacion()" value="Cacular">
 
-            <label name="const_b">Cateto B</label>
-            <input type="number" name="angu_b" id="angu_b"><br>
+    </form>
+
+    <p id="demo">a*x**2 + b*x +c</p>
+    <p id="resul"></p>
+    <p id="valores"></p>
+
+    <svg>
+        <line x1="100" y1="-100" x2="100" y2="600" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="-200" y1="200" x2="600" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+        <polyline id="cuadra" />
+
+    </svg>
+
+    <p>Triangulo (se recominda numero entre 30 - 50 para que grafico se distinga)</p>
+
+    <form>
+        <label name="const_a">Cateto A</label>
+        <input type="number" name="angu_a" id="angu_a"><br>
+
+        <label name="const_b">Cateto B</label>
+        <input type="number" name="angu_b" id="angu_b"><br>
 
 
-            <input type="button" onclick="Triangulo(),grafico_triagulo()" value="Cacular">
+        <input type="button" onclick="Triangulo(),grafico_triagulo()" value="Cacular">
 
-        </form>
+    </form>
 
-        <p id="lado"></p>
+    <p id="lado"></p>
 
-        <svg height="210" width="500">
-            <polygon id="grafi_triangulo" points="0,0 " />
-            <polygon id="cate_a" points="0,0 " />
-            <polygon id="cate_b" points="0,0 " />
-            <polygon id="hipote" points="0,0 " />
-        </svg>
+    <svg id="gra_tri">
+        <polygon id="triang" points="0,0 0,150 300,0" />
+        <polygon id="cate_a" points="0,0 " />
+        <polygon id="cate_b" points="0,0 " />
+        <polygon id="hipote" points="0,0 " />
+    </svg>
 
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>

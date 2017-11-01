@@ -1,19 +1,9 @@
-﻿function Triangulo() {
-    var a = document.getElementById("angu_a").value;
-    var b = document.getElementById("angu_b").value;
-
-    var lado_a = a ** 2;
-    var lado_b = b ** 2;
-    var suma = lado_a + lado_b;
-
-    document.getElementById("lado").innerHTML = " Resultado Hipotenusa:  " + suma ** (1 / 2);
-}
-function grafico_triagulo() {
+﻿function grafico_triagulo() {
     var a = document.getElementById("angu_a").value;
     var b = document.getElementById("angu_b").value;
 
     // Conecion a las figuras
-    var Trian = document.getElementById("grafi_triangulo");
+    var Trian = document.getElementById("triang");
     var cateto_a = document.getElementById("cate_a");
     var cateto_b = document.getElementById("cate_b");
     var hipotenu = document.getElementById("hipote");
@@ -59,19 +49,30 @@ function grafico_ecuacion() {
     var a = document.getElementById("const_a").value;
     var b = document.getElementById("const_b").value;
     var c = document.getElementById("const_c").value;
-    var polyline = document.getElementById("grafi_cuadra");
+    var polyline = document.getElementById("cuadra");
     var points = " ";
     var x_real = 0;
     var y = 0;
     var y_real = 0;
 
-    for (var x = 0; x <= 500; x = x + 5) {
+    for (var x = -300; x <= 300; x = x + 5) {
         x_real = x / 30;
         y = a * (x_real ** 2) + b * x_real + c / 30;
         y_real = 200 - y;
-        points += x + "," + y_real + " ";
+        points += x + 100 + "," + y_real + " ";
     }
     polyline.setAttribute('points', points);
+}
+
+function Triangulo() {
+    var a = document.getElementById("angu_a").value;
+    var b = document.getElementById("angu_b").value;
+
+    var lado_a = a ** 2;
+    var lado_b = b ** 2;
+    var suma = lado_a + lado_b;
+
+    document.getElementById("lado").innerHTML = " Resultado Hipotenusa:  " + suma ** (1 / 2);
 }
 
 function Ecuacion() {
